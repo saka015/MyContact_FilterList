@@ -9,73 +9,75 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     type="text/css">
 
-  <title>Filterable List (using vanilla JS)</title>
+  <title>My_Contacts</title>
 
   <style>
+    .collection-item:hover{
+      background-color: rgb(216, 216, 245);
+      color: white;
+      cursor: pointer;
+    }
+
+    a{
+      color: black;
+
+    }
+
+    a:hover{
+      color: white;
+
+    }
     
   
   .hide {
     display: none !important;
     padding: 0 !important;
   }
-  
+  button{
+    margin-left: 1%;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    background-color: lightcoral;
+    color: white;
+  }
   </style>
 
 </head>
 
 <body>
+
+  <button><a href="https://www.linkedin.com/in/saka015/">Made by saka015 🔥</a></button>
   <div class="container">
     <h1 class="center-align">My Contacts</h1>
-    <input type="text" id="filter-input" placeholder="Search names...">
+    <input type="text" id="filter-input" placeholder="Search by names , initials , surnames ...">
     <br>
     <br>
     <ul class="collection with-header" id="names">
-      <li class="collection-header">
-        <h5>A</h5>
-      </li>
-      <li class="collection-item"><a href="#">Adam</a></li>
-      <li class="collection-item"><a href="#">Amy</a></li>
-      <li class="collection-item"><a href="#">Alex</a></li>
-      <li class="collection-item"><a href="#">Amanda</a></li>
-      <li class="collection-item"><a href="#">Anto</a></li>
-      <li class="collection-header">
-        <h5>B</h5>
-      </li>
-      <li class="collection-item"><a href="#">Bob</a></li>
-      <li class="collection-item"><a href="#">Bill</a></li>
-      <li class="collection-item"><a href="#">Betty</a></li>
-      <li class="collection-item"><a href="#">Brad</a></li>
-      <li class="collection-item"><a href="#">Barbara</a></li>
-      <li class="collection-header">
-        <h5>C</h5>
-      </li>
-      <li class="collection-item"><a href="#">Colin</a></li>
-      <li class="collection-item"><a href="#">Cliff</a></li>
-      <li class="collection-item"><a href="#">Christine</a></li>
-      <li class="collection-item"><a href="#">Cyril</a></li>
-      <li class="collection-item"><a href="#">Cat</a></li>
-      <li class="collection-header">
-        <h5>D</h5>
-      </li>
-      <li class="collection-item"><a href="#">Dave</a></li>
-      <li class="collection-item"><a href="#">Donna</a></li>
-      <li class="collection-item"><a href="#">Diane</a></li>
-      <li class="collection-item"><a href="#">Debbie</a></li>
-      <li class="collection-item"><a href="#">Des</a></li>
-      <li class="collection-header">
-        <h5>E</h5>
-      </li>
-      <li class="collection-item"><a href="#">Emily</a></li>
-      <li class="collection-item"><a href="#">Eva</a></li>
-      <li class="collection-item"><a href="#">Elsa</a></li>
-      <li class="collection-item"><a href="#">Elizabeth</a></li>
-      <li class="collection-item"><a href="#">Eric</a></li>
+      <li class="collection-item"><a target="_blank" href="https://www.linkedin.com/in/agrim-sharma174?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADWMJPgBwTyEsNmgakT1lryt4W_9UAXlvTU&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BvV%2BXQY%2F1RqWD1JUhOf76xA%3D%3D">Agrim Sharma</a></li>
+      <li class="collection-item"><a target="_blank" href="https://www.linkedin.com/in/aryan-sharma17?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B50ZwyXT2TEaiP97RlMQkXg%3D%3D">Aryan Sharma</a></li>
+      <li class="collection-item"><a target="_blank" href="https://www.linkedin.com/in/theaakashrajput/">Akash Verma</a></li>
+      <li class="collection-item"><a target="_blank" href="https://www.linkedin.com/in/anshu-jain-8453a8245?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADy_mLUBW1p1gMB1ZU-ki3JRH2b0x9r8SMI&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bk%2FjUyoD9RymGpZuSWwyJtw%3D%3D">Anshu Jain</a></li>
+      <li class="collection-item"><a target="_blank" href="https://www.linkedin.com/in/diksha-sharma-824548244?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADyXupwBGwAggMPTFyIR3qlG1LcwoctUhUo&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BuV4rpu9STzqTR0SZJ%2Fq6cQ%3D%3D">Diksha Sharma</a></li>
+      <li class="collection-item"><a target="_blank" href="https://www.linkedin.com/in/gurdeep-singh-79a816236?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADrafeYBr1BzbCiWhTcPe-WiL4uR54Rm1CE&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3Bhezov6T6TNyEWMSRM9OAaQ%3D%3D">Gurdeep Singh</a></li>
+
+      <li class="collection-item"><a target="_blank" href="https://www.linkedin.com/in/mehak-45a190245?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADy3d4YBsu-yVemSA7RG-6BpscWs0hHd3ZA&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B49RJyEqgQwuFKqEJTy1hXA%3D%3D">Mehak</a></li>
+
+      <li class="collection-item"><a target="_blank" href="https://www.linkedin.com/in/simar-sidhu-828333246?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADzqz-AByzy4XRKrrnmbcFpgRHEhoO18M6Q&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3B1BnTvbQETRuBc77Y01V6kQ%3D%3D">Simar Sidhu</a></li>
+      
+      <li class="collection-item"><a target="_blank" href="https://www.linkedin.com/in/surajjbhardwaj?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADl2GqUBFSnADrMVx0bsU8HKyK8NThqXH-k&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BaSC%2B2CiATaS%2FP4MetrzWUQ%3D%3D">Suraj Pandey</a></li>
+      
+      
+      <li class="collection-item"><a target="_blank" href="https://www.linkedin.com/in/vasu-beri-984740233?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAADpOzXQBQFJBLMWtDeh9IwVDKPwJdIj5B4Y&lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BdrD4FU6yTj%2Bojr%2B5guYmRw%3D%3D">Vasu Beri</a></li>
+      
+      
     </ul>
   </div>
 
   <script>
 
-    // ***** BRAD TRAVERSY'S (OUTDATED?) CODE *****
 
     // GET INPUT ELEMENT
 
